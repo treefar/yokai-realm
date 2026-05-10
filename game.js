@@ -4438,11 +4438,17 @@ window.addEventListener('unhandledrejection', (e) => {
 
 const PRELOAD_MAX_CONCURRENT = 6;
 
-function collectPreloadAssets() {
+function isAudioAsset(url) {
+  return /\.(wav|mp3|ogg|m4a)(\?|$)/i.test(url);
+}
+
+function collectPreloadAssets(options = {}) {
+  const includeAudio = options.includeAudio === true;
   const seen = new Set();
   const add = (value) => {
     if (typeof value !== 'string') return;
     const url = value.trim();
+    if (!includeAudio && isAudioAsset(url)) return;
     if (url.startsWith('assets/')) seen.add(url);
   };
   const walk = (value) => {
@@ -4454,8 +4460,10 @@ function collectPreloadAssets() {
 
   walk(ASSETS);
   walk(YAOLI);
-  walk(AUDIO_BGM);
-  walk(AUDIO_SFX);
+  if (includeAudio) {
+    walk(AUDIO_BGM);
+    walk(AUDIO_SFX);
+  }
 
   document.querySelectorAll('[src]').forEach(el => add(el.getAttribute('src')));
 
@@ -4553,7 +4561,7 @@ async function preloadOneAsset(url) {
 }
 
 async function preloadGameAssets() {
-  const assets = collectPreloadAssets();
+  const assets = collectPreloadAssets({ includeAudio: false });
   if (!assets.length) {
     setLoadingProgress(1, 1, '載入完成');
     return;
@@ -4562,7 +4570,7 @@ async function preloadGameAssets() {
   let next = 0;
   let done = 0;
   const failures = [];
-  setLoadingProgress(0, assets.length, `載入資產 0/${assets.length}`);
+  setLoadingProgress(0, assets.length, `載入圖像 0/${assets.length}`);
 
   async function worker() {
     while (next < assets.length) {
@@ -4571,8 +4579,8 @@ async function preloadGameAssets() {
       done++;
       if (!result.ok) failures.push(result);
       const detail = done >= assets.length
-        ? (failures.length ? `部分資產稍後補載 ${failures.length}/${assets.length}` : '載入完成')
-        : `載入資產 ${done}/${assets.length}`;
+        ? (failures.length ? `部分圖像稍後補載 ${failures.length}/${assets.length}` : '載入完成')
+        : `載入圖像 ${done}/${assets.length}`;
       setLoadingProgress(done, assets.length, detail);
     }
   }
@@ -4583,6 +4591,19 @@ async function preloadGameAssets() {
   ));
   if (failures.length) console.warn('[preload] Some assets were not warmed before boot:', failures);
   await new Promise(resolve => window.setTimeout(resolve, 250));
+}
+
+function warmAudioAssets() {
+  const assets = collectPreloadAssets({ includeAudio: true }).filter(isAudioAsset);
+  let next = 0;
+  async function worker() {
+    while (next < assets.length) {
+      const url = assets[next++];
+      await preloadOneAsset(url);
+    }
+  }
+  Promise.all(Array.from({ length: Math.min(2, assets.length) }, () => worker()))
+    .catch(error => console.warn('[preload] Audio cache warmup skipped:', error));
 }
 
 function finishLoadingScreen() {
@@ -4632,6 +4653,7 @@ function bootGame() {
   document.addEventListener('click', _unlockAudio, { once: true });
   document.addEventListener('keydown', _unlockAudio, { once: true });
   finishLoadingScreen();
+  warmAudioAssets();
 }
 
 preloadGameAssets()
