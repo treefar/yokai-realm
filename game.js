@@ -4437,6 +4437,7 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 const PRELOAD_MAX_CONCURRENT = 6;
+const PRELOAD_ASSET_TIMEOUT_MS = 12000;
 
 function isAudioAsset(url) {
   return /\.(wav|mp3|ogg|m4a)(\?|$)/i.test(url);
@@ -4480,6 +4481,20 @@ function collectPreloadAssets(options = {}) {
   }
 
   return [...seen];
+}
+
+function collectCriticalPreloadAssets() {
+  return [...new Set([
+    ASSETS.ui.seal,
+    ASSETS.bg.chapterCard,
+    ASSETS.bg.museum,
+    ASSETS.bg.modernStreet,
+    ASSETS.bg.yaojingScroll,
+    ASSETS.char.ruoliModern.normal,
+    ASSETS.char.ruoliModern.falling,
+    ASSETS.char.ruoli.normal,
+    ASSETS.char.bailing.smile,
+  ].filter(Boolean))];
 }
 
 function setLoadingProgress(done, total, detailText) {
@@ -4527,6 +4542,14 @@ function preloadAudioElement(url) {
   });
 }
 
+function withPreloadTimeout(promise, url) {
+  let timer = 0;
+  const timeout = new Promise((_, reject) => {
+    timer = window.setTimeout(() => reject(new Error(`preload timeout: ${url}`)), PRELOAD_ASSET_TIMEOUT_MS);
+  });
+  return Promise.race([promise, timeout]).finally(() => window.clearTimeout(timer));
+}
+
 async function preloadFetch(url) {
   if (!window.fetch || window.location.protocol === 'file:') {
     return preloadAudioElement(url);
@@ -4548,11 +4571,11 @@ async function preloadOneAsset(url) {
   try {
     const cleanUrl = url.split('?')[0].toLowerCase();
     if (/\.(png|jpg|jpeg|webp|gif)$/.test(cleanUrl)) {
-      await preloadImage(url);
+      await withPreloadTimeout(preloadImage(url), url);
     } else if (/\.(wav|mp3|ogg|m4a)$/.test(cleanUrl)) {
-      await preloadFetch(url);
+      await withPreloadTimeout(preloadFetch(url), url);
     } else {
-      await preloadFetch(url);
+      await withPreloadTimeout(preloadFetch(url), url);
     }
     return { ok: true, url };
   } catch (error) {
@@ -4561,7 +4584,7 @@ async function preloadOneAsset(url) {
 }
 
 async function preloadGameAssets() {
-  const assets = collectPreloadAssets({ includeAudio: false });
+  const assets = collectCriticalPreloadAssets();
   if (!assets.length) {
     setLoadingProgress(1, 1, '載入完成');
     return;
@@ -4570,7 +4593,7 @@ async function preloadGameAssets() {
   let next = 0;
   let done = 0;
   const failures = [];
-  setLoadingProgress(0, assets.length, `載入圖像 0/${assets.length}`);
+  setLoadingProgress(0, assets.length, `載入開場圖像 0/${assets.length}`);
 
   async function worker() {
     while (next < assets.length) {
@@ -4580,7 +4603,7 @@ async function preloadGameAssets() {
       if (!result.ok) failures.push(result);
       const detail = done >= assets.length
         ? (failures.length ? `部分圖像稍後補載 ${failures.length}/${assets.length}` : '載入完成')
-        : `載入圖像 ${done}/${assets.length}`;
+        : `載入開場圖像 ${done}/${assets.length}`;
       setLoadingProgress(done, assets.length, detail);
     }
   }
@@ -4591,6 +4614,20 @@ async function preloadGameAssets() {
   ));
   if (failures.length) console.warn('[preload] Some assets were not warmed before boot:', failures);
   await new Promise(resolve => window.setTimeout(resolve, 250));
+}
+
+function warmImageAssets() {
+  const critical = new Set(collectCriticalPreloadAssets());
+  const assets = collectPreloadAssets({ includeAudio: false }).filter(url => !critical.has(url));
+  let next = 0;
+  async function worker() {
+    while (next < assets.length) {
+      const url = assets[next++];
+      await preloadOneAsset(url);
+    }
+  }
+  Promise.all(Array.from({ length: Math.min(4, assets.length) }, () => worker()))
+    .catch(error => console.warn('[preload] Image cache warmup skipped:', error));
 }
 
 function warmAudioAssets() {
@@ -4653,6 +4690,7 @@ function bootGame() {
   document.addEventListener('click', _unlockAudio, { once: true });
   document.addEventListener('keydown', _unlockAudio, { once: true });
   finishLoadingScreen();
+  warmImageAssets();
   warmAudioAssets();
 }
 
