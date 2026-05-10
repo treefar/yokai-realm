@@ -23,33 +23,33 @@
 const ASSETS = {
   bg: {
     // 既有 6 張水墨手繪 PNG
-    museum:          'assets/bg/museum.png?v=20260510-asset2',
-    mistVillage:     'assets/bg/mist-village.png?v=20260510-asset2',
-    villageInterior: 'assets/bg/village-interior.png?v=20260510-asset2',
-    bambooForest:    'assets/bg/bamboo-forest.png?v=20260510-asset2',
-    bossArena:       'assets/bg/boss-arena.png?v=20260510-asset2',
-    chapterCard:     'assets/bg/chapter-card.png?v=20260510-asset2',
+    museum:          'assets/bg/museum.png?v=20260510-preload1',
+    mistVillage:     'assets/bg/mist-village.png?v=20260510-preload1',
+    villageInterior: 'assets/bg/village-interior.png?v=20260510-preload1',
+    bambooForest:    'assets/bg/bamboo-forest.png?v=20260510-preload1',
+    bossArena:       'assets/bg/boss-arena.png?v=20260510-preload1',
+    chapterCard:     'assets/bg/chapter-card.png?v=20260510-preload1',
     // 後續章節新增專屬手繪 PNG（已不再共用 + 染色）
-    foxfire:         'assets/bg/foxfire.png?v=20260510-asset2',
-    foxfireArena:    'assets/bg/foxfire-arena.png?v=20260510-asset2',
-    southMountain:   'assets/bg/south-mountain.png?v=20260510-asset2',
-    southArena:      'assets/bg/south-arena.png?v=20260510-asset2',
-    rift:            'assets/bg/rift.png?v=20260510-asset2',
-    riftArena:       'assets/bg/rift-arena.png?v=20260510-asset2',
-    nuwa:            'assets/bg/nuwa.png?v=20260510-asset2',
-    nuwaArena:       'assets/bg/nuwa-arena.png?v=20260510-asset2',
-    finalArena:      'assets/bg/final-arena.png?v=20260510-asset2',
-    finalArenaBoss:  'assets/bg/final-arena-boss.png?v=20260510-asset2',
-    modernStreet:    'assets/bg/modern-street.png?v=20260510-asset2',
+    foxfire:         'assets/bg/foxfire.png?v=20260510-preload1',
+    foxfireArena:    'assets/bg/foxfire-arena.png?v=20260510-preload1',
+    southMountain:   'assets/bg/south-mountain.png?v=20260510-preload1',
+    southArena:      'assets/bg/south-arena.png?v=20260510-preload1',
+    rift:            'assets/bg/rift.png?v=20260510-preload1',
+    riftArena:       'assets/bg/rift-arena.png?v=20260510-preload1',
+    nuwa:            'assets/bg/nuwa.png?v=20260510-preload1',
+    nuwaArena:       'assets/bg/nuwa-arena.png?v=20260510-preload1',
+    finalArena:      'assets/bg/final-arena.png?v=20260510-preload1',
+    finalArenaBoss:  'assets/bg/final-arena-boss.png?v=20260510-preload1',
+    modernStreet:    'assets/bg/modern-street.png?v=20260510-preload1',
     // 以下尚無圖時 fallback 到 modernStreet（檔案到位後改路徑即可）
-    modernClassroom: 'assets/bg/modern-classroom.png?v=20260510-asset2',
-    modernHome:      'assets/bg/modern-home.png?v=20260510-asset2',
-    endingUnnamed:   'assets/bg/ending-unnamed-card.png?v=20260510-asset2',
-    yaojingScroll:   'assets/bg/yaojing-scroll.png?v=20260510-asset2',
-    museumNight:     'assets/bg/museum-night.png?v=20260510-asset2',
-    bambooFar:       'assets/bg/bamboo-far.png?v=20260510-asset2',
-    bambooMid:       'assets/bg/bamboo-mid.png?v=20260510-asset2',
-    bambooNear:      'assets/bg/bamboo-near.png?v=20260510-asset2',
+    modernClassroom: 'assets/bg/modern-classroom.png?v=20260510-preload1',
+    modernHome:      'assets/bg/modern-home.png?v=20260510-preload1',
+    endingUnnamed:   'assets/bg/ending-unnamed-card.png?v=20260510-preload1',
+    yaojingScroll:   'assets/bg/yaojing-scroll.png?v=20260510-preload1',
+    museumNight:     'assets/bg/museum-night.png?v=20260510-preload1',
+    bambooFar:       'assets/bg/bamboo-far.png?v=20260510-preload1',
+    bambooMid:       'assets/bg/bamboo-mid.png?v=20260510-preload1',
+    bambooNear:      'assets/bg/bamboo-near.png?v=20260510-preload1',
   },
   // VN 背景 CSS filter — 既然有專屬手繪，色調不再過度染色（保留輕微 brightness 微調作氣氛）
   bgTint: {
@@ -57,97 +57,97 @@ const ASSETS = {
   },
   char: {
     ruoli: {
-      normal:     'assets/char/ruoli/normal.png?v=20260510-asset2',
-      surprised:  'assets/char/ruoli/surprised.png?v=20260510-asset2',
-      worried:    'assets/char/ruoli/worried.png?v=20260510-asset2',
-      determined: 'assets/char/ruoli/determined.png?v=20260510-asset2',
-      ch3Normal:  'assets/char/ruoli/ch3-attired-normal.png?v=20260510-asset2',
-      ch3Determined: 'assets/char/ruoli/ch3-attired-determined.png?v=20260510-asset2',
-      ch5Normal:  'assets/char/ruoli/ch5-attired-normal.png?v=20260510-asset2',
-      ch5Determined: 'assets/char/ruoli/ch5-attired-determined.png?v=20260510-asset2',
-      finaleNormal: 'assets/char/ruoli/finale-normal.png?v=20260510-asset2',
-      finaleDetermined: 'assets/char/ruoli/finale-determined.png?v=20260510-asset2',
+      normal:     'assets/char/ruoli/normal.png?v=20260510-preload1',
+      surprised:  'assets/char/ruoli/surprised.png?v=20260510-preload1',
+      worried:    'assets/char/ruoli/worried.png?v=20260510-preload1',
+      determined: 'assets/char/ruoli/determined.png?v=20260510-preload1',
+      ch3Normal:  'assets/char/ruoli/ch3-attired-normal.png?v=20260510-preload1',
+      ch3Determined: 'assets/char/ruoli/ch3-attired-determined.png?v=20260510-preload1',
+      ch5Normal:  'assets/char/ruoli/ch5-attired-normal.png?v=20260510-preload1',
+      ch5Determined: 'assets/char/ruoli/ch5-attired-determined.png?v=20260510-preload1',
+      finaleNormal: 'assets/char/ruoli/finale-normal.png?v=20260510-preload1',
+      finaleDetermined: 'assets/char/ruoli/finale-determined.png?v=20260510-preload1',
     },
     ruoliModern: {
-      normal:  'assets/char/ruoli-modern/normal.png?v=20260510-asset2',
-      curious: 'assets/char/ruoli-modern/curious.png?v=20260510-asset2',
-      falling: 'assets/char/ruoli-modern/falling.png?v=20260510-asset2',
+      normal:  'assets/char/ruoli-modern/normal.png?v=20260510-preload1',
+      curious: 'assets/char/ruoli-modern/curious.png?v=20260510-preload1',
+      falling: 'assets/char/ruoli-modern/falling.png?v=20260510-preload1',
     },
     bailing: {
-      smile: 'assets/char/bailing/smile.png?v=20260510-asset2',
-      sly:   'assets/char/bailing/sly.png?v=20260510-asset2',
+      smile: 'assets/char/bailing/smile.png?v=20260510-preload1',
+      sly:   'assets/char/bailing/sly.png?v=20260510-preload1',
     },
     xuance: {
-      normal:    'assets/char/xuance/normal.png?v=20260510-asset2',
-      stern:     'assets/char/xuance/stern.png?v=20260510-asset2',
-      surprised: 'assets/char/xuance/surprised.png?v=20260510-asset2',
+      normal:    'assets/char/xuance/normal.png?v=20260510-preload1',
+      stern:     'assets/char/xuance/stern.png?v=20260510-preload1',
+      surprised: 'assets/char/xuance/surprised.png?v=20260510-preload1',
     },
     chiyu: {
-      normal:   'assets/char/chiyu/normal.png?v=20260510-asset2',
-      focused:  'assets/char/chiyu/focused.png?v=20260510-asset2',
-      friendly: 'assets/char/chiyu/friendly.png?v=20260510-asset2',
+      normal:   'assets/char/chiyu/normal.png?v=20260510-preload1',
+      focused:  'assets/char/chiyu/focused.png?v=20260510-preload1',
+      friendly: 'assets/char/chiyu/friendly.png?v=20260510-preload1',
     },
     nuwa: {
-      apparition: 'assets/char/nuwa/apparition.png?v=20260510-asset2',
-      sad:         'assets/char/nuwa/sad.png?v=20260510-asset2',
-      normal:      'assets/char/nuwa/apparition.png?v=20260510-asset2',
+      apparition: 'assets/char/nuwa/apparition.png?v=20260510-preload1',
+      sad:         'assets/char/nuwa/sad.png?v=20260510-preload1',
+      normal:      'assets/char/nuwa/apparition.png?v=20260510-preload1',
     },
     classmate: {
-      normal:  'assets/char/classmate/normal.png?v=20260510-asset2',
-      worried: 'assets/char/classmate/worried.png?v=20260510-asset2',
+      normal:  'assets/char/classmate/normal.png?v=20260510-preload1',
+      worried: 'assets/char/classmate/worried.png?v=20260510-preload1',
     },
     mother: {
-      normal: 'assets/char/mother/normal.png?v=20260510-asset2',
+      normal: 'assets/char/mother/normal.png?v=20260510-preload1',
     },
     curator: {
-      normal: 'assets/char/curator/normal.png?v=20260510-asset2',
+      normal: 'assets/char/curator/normal.png?v=20260510-preload1',
     },
   },
   battle: {
-    ruoli:     'assets/battle/ruoli.png?v=20260510-asset2',
-    boar:      'assets/battle/boar.png?v=20260510-asset2',
-    leap:      'assets/battle/leap.png?v=20260510-asset2',
-    wisp:      'assets/battle/wisp.png?v=20260510-asset2',
-    boss:      'assets/battle/boss.png?v=20260510-asset2',
+    ruoli:     'assets/battle/ruoli.png?v=20260510-preload1',
+    boar:      'assets/battle/boar.png?v=20260510-preload1',
+    leap:      'assets/battle/leap.png?v=20260510-preload1',
+    wisp:      'assets/battle/wisp.png?v=20260510-preload1',
+    boss:      'assets/battle/boss.png?v=20260510-preload1',
     // 新增專屬手繪 PNG（不再用 tint 區分）
-    foxfire:   'assets/battle/foxfire.png?v=20260510-asset2',
-    yaobing:   'assets/battle/yaobing.png?v=20260510-asset2',
-    guidiao:   'assets/battle/guidiao.png?v=20260510-asset2',
-    qiongqi:   'assets/battle/qiongqi.png?v=20260510-asset2',
-    guardian:  'assets/battle/guardian.png?v=20260510-asset2',
-    finalboss: 'assets/battle/finalboss.png?v=20260510-asset2',
-    jiuwei:    'assets/battle/jiuwei.png?v=20260510-asset2',
+    foxfire:   'assets/battle/foxfire.png?v=20260510-preload1',
+    yaobing:   'assets/battle/yaobing.png?v=20260510-preload1',
+    guidiao:   'assets/battle/guidiao.png?v=20260510-preload1',
+    qiongqi:   'assets/battle/qiongqi.png?v=20260510-preload1',
+    guardian:  'assets/battle/guardian.png?v=20260510-preload1',
+    finalboss: 'assets/battle/finalboss.png?v=20260510-preload1',
+    jiuwei:    'assets/battle/jiuwei.png?v=20260510-preload1',
   },
   bossIntro: {
-    boss:      'assets/battle/boss-intro/wuyao-hero.png?v=20260510-asset2',
-    jiuwei:    'assets/battle/boss-intro/jiuwei-hero.png?v=20260510-asset2',
-    qiongqi:   'assets/battle/boss-intro/qiongqi-hero.png?v=20260510-asset2',
-    guidiao:   'assets/battle/boss-intro/guidiao-hero.png?v=20260510-asset2',
-    guardian:  'assets/battle/boss-intro/guardian-hero.png?v=20260510-asset2',
-    finalboss: 'assets/battle/boss-intro/finalboss-hero.png?v=20260510-asset2',
+    boss:      'assets/battle/boss-intro/wuyao-hero.png?v=20260510-preload1',
+    jiuwei:    'assets/battle/boss-intro/jiuwei-hero.png?v=20260510-preload1',
+    qiongqi:   'assets/battle/boss-intro/qiongqi-hero.png?v=20260510-preload1',
+    guidiao:   'assets/battle/boss-intro/guidiao-hero.png?v=20260510-preload1',
+    guardian:  'assets/battle/boss-intro/guardian-hero.png?v=20260510-preload1',
+    finalboss: 'assets/battle/boss-intro/finalboss-hero.png?v=20260510-preload1',
   },
   ui: {
-    seal: 'assets/ui/seal.png?v=20260510-asset2',
+    seal: 'assets/ui/seal.png?v=20260510-preload1',
     items: {
-      phone: 'assets/ui/items/phone.png?v=20260510-asset2',
-      studentId: 'assets/ui/items/student-id.png?v=20260510-asset2',
-      sketchbook: 'assets/ui/items/sketchbook.png?v=20260510-asset2',
-      scrollFrag: 'assets/ui/items/scroll-yaojing.png?v=20260510-asset2',
-      yaoliPill: 'assets/ui/items/yaoli-pill.png?v=20260510-asset2',
-      hpDrop: 'assets/ui/items/hp-drop.png?v=20260510-asset2',
+      phone: 'assets/ui/items/phone.png?v=20260510-preload1',
+      studentId: 'assets/ui/items/student-id.png?v=20260510-preload1',
+      sketchbook: 'assets/ui/items/sketchbook.png?v=20260510-preload1',
+      scrollFrag: 'assets/ui/items/scroll-yaojing.png?v=20260510-preload1',
+      yaoliPill: 'assets/ui/items/yaoli-pill.png?v=20260510-preload1',
+      hpDrop: 'assets/ui/items/hp-drop.png?v=20260510-preload1',
     },
     touch: {
-      jump: 'assets/ui/touch/jump.png?v=20260510-asset2',
-      attack: 'assets/ui/touch/attack.png?v=20260510-asset2',
-      roll: 'assets/ui/touch/roll.png?v=20260510-asset2',
-      yaoli: 'assets/ui/touch/yaoli.png?v=20260510-asset2',
+      jump: 'assets/ui/touch/jump.png?v=20260510-preload1',
+      attack: 'assets/ui/touch/attack.png?v=20260510-preload1',
+      roll: 'assets/ui/touch/roll.png?v=20260510-preload1',
+      yaoli: 'assets/ui/touch/yaoli.png?v=20260510-preload1',
     },
     yaoliIcons: {
-      inkshade:   'assets/ui/yaoli/ink.png?v=20260510-asset2',
-      moonlight:  'assets/ui/yaoli/moon.png?v=20260510-asset2',
-      azureflame: 'assets/ui/yaoli/flame.png?v=20260510-asset2',
-      windplume:  'assets/ui/yaoli/wind.png?v=20260510-asset2',
-      spiritbind: 'assets/ui/yaoli/bind.png?v=20260510-asset2',
+      inkshade:   'assets/ui/yaoli/ink.png?v=20260510-preload1',
+      moonlight:  'assets/ui/yaoli/moon.png?v=20260510-preload1',
+      azureflame: 'assets/ui/yaoli/flame.png?v=20260510-preload1',
+      windplume:  'assets/ui/yaoli/wind.png?v=20260510-preload1',
+      spiritbind: 'assets/ui/yaoli/bind.png?v=20260510-preload1',
     },
   },
 };
@@ -178,11 +178,11 @@ const CHAR_NAMES = {
 // 3. YAOLI — 五大妖力屬性
 // ============================================================
 const YAOLI = {
-  inkshade:  { id:'inkshade',  name:'墨影', cost:35, color:'#1a1612', icon:'assets/ui/yaoli/ink.png?v=20260510-asset2',   desc:'遠距水墨斬擊', dmgMul:2.5, basicDmg:12 },
-  moonlight: { id:'moonlight', name:'月華', cost:40, color:'#d8e0f0', icon:'assets/ui/yaoli/moon.png?v=20260510-asset2',  desc:'回血展盾',     dmgMul:1.6, basicDmg:11, heal:18 },
-  azureflame:{ id:'azureflame',name:'青焰', cost:30, color:'#f5601a', icon:'assets/ui/yaoli/flame.png?v=20260510-asset2', desc:'近身燃燒',     dmgMul:2.2, basicDmg:13, burn:true },
-  windplume: { id:'windplume', name:'風羽', cost:25, color:'#5ad0e0', icon:'assets/ui/yaoli/wind.png?v=20260510-asset2',  desc:'高速二段',     dmgMul:2.0, basicDmg:11, fast:true },
-  spiritbind:{ id:'spiritbind',name:'靈縛', cost:45, color:'#a060d8', icon:'assets/ui/yaoli/bind.png?v=20260510-asset2',  desc:'束縛敵人',     dmgMul:1.8, basicDmg:11, stun:true },
+  inkshade:  { id:'inkshade',  name:'墨影', cost:35, color:'#1a1612', icon:'assets/ui/yaoli/ink.png?v=20260510-preload1',   desc:'遠距水墨斬擊', dmgMul:2.5, basicDmg:12 },
+  moonlight: { id:'moonlight', name:'月華', cost:40, color:'#d8e0f0', icon:'assets/ui/yaoli/moon.png?v=20260510-preload1',  desc:'回血展盾',     dmgMul:1.6, basicDmg:11, heal:18 },
+  azureflame:{ id:'azureflame',name:'青焰', cost:30, color:'#f5601a', icon:'assets/ui/yaoli/flame.png?v=20260510-preload1', desc:'近身燃燒',     dmgMul:2.2, basicDmg:13, burn:true },
+  windplume: { id:'windplume', name:'風羽', cost:25, color:'#5ad0e0', icon:'assets/ui/yaoli/wind.png?v=20260510-preload1',  desc:'高速二段',     dmgMul:2.0, basicDmg:11, fast:true },
+  spiritbind:{ id:'spiritbind',name:'靈縛', cost:45, color:'#a060d8', icon:'assets/ui/yaoli/bind.png?v=20260510-preload1',  desc:'束縛敵人',     dmgMul:1.8, basicDmg:11, stun:true },
 };
 
 // ============================================================
@@ -840,30 +840,30 @@ const Settings = {
 // 6.6 Audio — BGM/SFX，檔案缺失時靜默不報錯
 // ============================================================
 const AUDIO_BGM = {
-  title:        'assets/audio/bgm/title.wav?v=20260510-asset2',
-  museum:       'assets/audio/bgm/museum.wav?v=20260510-asset2',
-  mistVillage:  'assets/audio/bgm/mistVillage.wav?v=20260510-asset2',
-  foxfire:      'assets/audio/bgm/foxfire.wav?v=20260510-asset2',
-  south:        'assets/audio/bgm/south.wav?v=20260510-asset2',
-  rift:         'assets/audio/bgm/rift.wav?v=20260510-asset2',
-  nuwa:         'assets/audio/bgm/nuwa.wav?v=20260510-asset2',
-  battle:       'assets/audio/bgm/battle.wav?v=20260510-asset2',
-  final:        'assets/audio/bgm/final.wav?v=20260510-asset2',
-  ending:       'assets/audio/bgm/ending.wav?v=20260510-asset2',
+  title:        'assets/audio/bgm/title.wav?v=20260510-preload1',
+  museum:       'assets/audio/bgm/museum.wav?v=20260510-preload1',
+  mistVillage:  'assets/audio/bgm/mistVillage.wav?v=20260510-preload1',
+  foxfire:      'assets/audio/bgm/foxfire.wav?v=20260510-preload1',
+  south:        'assets/audio/bgm/south.wav?v=20260510-preload1',
+  rift:         'assets/audio/bgm/rift.wav?v=20260510-preload1',
+  nuwa:         'assets/audio/bgm/nuwa.wav?v=20260510-preload1',
+  battle:       'assets/audio/bgm/battle.wav?v=20260510-preload1',
+  final:        'assets/audio/bgm/final.wav?v=20260510-preload1',
+  ending:       'assets/audio/bgm/ending.wav?v=20260510-preload1',
 };
 const AUDIO_SFX = {
-  inkStroke:    'assets/audio/sfx/ink-stroke.wav?v=20260510-asset2',
-  jump:         'assets/audio/sfx/jump.wav?v=20260510-asset2',
-  roll:         'assets/audio/sfx/roll.wav?v=20260510-asset2',
-  hit:          'assets/audio/sfx/hit.wav?v=20260510-asset2',
-  hitYaoli:     'assets/audio/sfx/hit-yaoli.wav?v=20260510-asset2',
-  playerHurt:   'assets/audio/sfx/player-hurt.wav?v=20260510-asset2',
-  uiStamp:      'assets/audio/sfx/ui-stamp.wav?v=20260510-asset2',
-  uiPage:       'assets/audio/sfx/ui-page.wav?v=20260510-asset2',
-  victory:      'assets/audio/sfx/victory.wav?v=20260510-asset2',
-  defeat:       'assets/audio/sfx/defeat.wav?v=20260510-asset2',
-  bossRoar:     'assets/audio/sfx/boss-roar.wav?v=20260510-asset2',
-  bossWarning:  'assets/audio/sfx/boss-warning.wav?v=20260510-asset2',
+  inkStroke:    'assets/audio/sfx/ink-stroke.wav?v=20260510-preload1',
+  jump:         'assets/audio/sfx/jump.wav?v=20260510-preload1',
+  roll:         'assets/audio/sfx/roll.wav?v=20260510-preload1',
+  hit:          'assets/audio/sfx/hit.wav?v=20260510-preload1',
+  hitYaoli:     'assets/audio/sfx/hit-yaoli.wav?v=20260510-preload1',
+  playerHurt:   'assets/audio/sfx/player-hurt.wav?v=20260510-preload1',
+  uiStamp:      'assets/audio/sfx/ui-stamp.wav?v=20260510-preload1',
+  uiPage:       'assets/audio/sfx/ui-page.wav?v=20260510-preload1',
+  victory:      'assets/audio/sfx/victory.wav?v=20260510-preload1',
+  defeat:       'assets/audio/sfx/defeat.wav?v=20260510-preload1',
+  bossRoar:     'assets/audio/sfx/boss-roar.wav?v=20260510-preload1',
+  bossWarning:  'assets/audio/sfx/boss-warning.wav?v=20260510-preload1',
 };
 const Audio = {
   bgm: null,        // 目前播放中的 HTMLAudioElement
@@ -4436,35 +4436,208 @@ window.addEventListener('unhandledrejection', (e) => {
   console.error('[Yaojingshuo promise rejection]', e.reason);
 });
 
+const PRELOAD_MAX_CONCURRENT = 6;
+
+function collectPreloadAssets() {
+  const seen = new Set();
+  const add = (value) => {
+    if (typeof value !== 'string') return;
+    const url = value.trim();
+    if (url.startsWith('assets/')) seen.add(url);
+  };
+  const walk = (value) => {
+    if (!value) return;
+    if (typeof value === 'string') { add(value); return; }
+    if (Array.isArray(value)) { value.forEach(walk); return; }
+    if (typeof value === 'object') Object.values(value).forEach(walk);
+  };
+
+  walk(ASSETS);
+  walk(YAOLI);
+  walk(AUDIO_BGM);
+  walk(AUDIO_SFX);
+
+  document.querySelectorAll('[src]').forEach(el => add(el.getAttribute('src')));
+
+  const cssUrlRe = /url\(["']?(assets\/[^"')]+)["']?\)/g;
+  for (const sheet of document.styleSheets) {
+    try {
+      for (const rule of sheet.cssRules || []) {
+        let match;
+        while ((match = cssUrlRe.exec(rule.cssText || ''))) add(match[1]);
+      }
+    } catch (_) {
+      // Cross-origin or not-yet-readable stylesheets are ignored; game constants cover shipped assets.
+    }
+  }
+
+  return [...seen];
+}
+
+function setLoadingProgress(done, total, detailText) {
+  const percent = total > 0 ? Math.round((done / total) * 100) : 100;
+  const fill = document.getElementById('loading-bar-fill');
+  const percentEl = document.getElementById('loading-percent');
+  const detail = document.getElementById('loading-detail');
+  if (fill) fill.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+  if (percentEl) percentEl.textContent = `${percent}%`;
+  if (detail) detail.textContent = detailText || `載入資產 ${done}/${total}`;
+}
+
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = async () => {
+      try {
+        if (img.decode) await img.decode();
+      } catch (_) {}
+      resolve();
+    };
+    img.onerror = () => reject(new Error(`image failed: ${url}`));
+    img.src = url;
+  });
+}
+
+function preloadAudioElement(url) {
+  return new Promise((resolve, reject) => {
+    const audio = new Audio();
+    let settled = false;
+    const finish = (ok) => {
+      if (settled) return;
+      settled = true;
+      audio.removeAttribute('src');
+      audio.load();
+      ok ? resolve() : reject(new Error(`audio failed: ${url}`));
+    };
+    audio.preload = 'auto';
+    audio.oncanplaythrough = () => finish(true);
+    audio.onloadeddata = () => finish(true);
+    audio.onerror = () => finish(false);
+    window.setTimeout(() => finish(true), 3500);
+    audio.src = url;
+    audio.load();
+  });
+}
+
+async function preloadFetch(url) {
+  if (!window.fetch || window.location.protocol === 'file:') {
+    return preloadAudioElement(url);
+  }
+  const response = await fetch(url, { cache: 'force-cache' });
+  if (!response.ok) throw new Error(`${response.status} ${url}`);
+  if (response.body && response.body.getReader) {
+    const reader = response.body.getReader();
+    for (;;) {
+      const { done } = await reader.read();
+      if (done) break;
+    }
+  } else {
+    await response.blob();
+  }
+}
+
+async function preloadOneAsset(url) {
+  try {
+    const cleanUrl = url.split('?')[0].toLowerCase();
+    if (/\.(png|jpg|jpeg|webp|gif)$/.test(cleanUrl)) {
+      await preloadImage(url);
+    } else if (/\.(wav|mp3|ogg|m4a)$/.test(cleanUrl)) {
+      await preloadFetch(url);
+    } else {
+      await preloadFetch(url);
+    }
+    return { ok: true, url };
+  } catch (error) {
+    return { ok: false, url, error };
+  }
+}
+
+async function preloadGameAssets() {
+  const assets = collectPreloadAssets();
+  if (!assets.length) {
+    setLoadingProgress(1, 1, '載入完成');
+    return;
+  }
+
+  let next = 0;
+  let done = 0;
+  const failures = [];
+  setLoadingProgress(0, assets.length, `載入資產 0/${assets.length}`);
+
+  async function worker() {
+    while (next < assets.length) {
+      const url = assets[next++];
+      const result = await preloadOneAsset(url);
+      done++;
+      if (!result.ok) failures.push(result);
+      const detail = done >= assets.length
+        ? (failures.length ? `部分資產稍後補載 ${failures.length}/${assets.length}` : '載入完成')
+        : `載入資產 ${done}/${assets.length}`;
+      setLoadingProgress(done, assets.length, detail);
+    }
+  }
+
+  await Promise.all(Array.from(
+    { length: Math.min(PRELOAD_MAX_CONCURRENT, assets.length) },
+    () => worker()
+  ));
+  if (failures.length) console.warn('[preload] Some assets were not warmed before boot:', failures);
+  await new Promise(resolve => window.setTimeout(resolve, 250));
+}
+
+function finishLoadingScreen() {
+  const screen = document.getElementById('loading-screen');
+  window.requestAnimationFrame(() => {
+    document.body.classList.remove('is-preloading');
+    if (screen) window.setTimeout(() => screen.remove(), 600);
+  });
+}
+
 // ============================================================
 // 17. 啟動
 // ============================================================
-Settings.load();
-Settings.bind();
-Settings.applyToUI();
-Achievements.load();
-Glossary.load();
-Inventory.load();
-NGPlus.load();
-VN.init();
-initTouchPad();
-initOptionalTouchArt();
-applyI18nDOM();
-refreshTitleButtons();
-showScene('title');
+let didBootGame = false;
 
-// 進入新章節時自動存到 auto 槽
-const _origOnChapterComplete = onChapterComplete;
-onChapterComplete = function() {
-  saveGameToSlot('auto');
-  _origOnChapterComplete();
-};
+function bootGame() {
+  if (didBootGame) return;
+  didBootGame = true;
 
-// 嘗試解鎖瀏覽器的自動播放（首次互動時）
-const _unlockAudio = () => {
-  Audio.unlock();
-  document.removeEventListener('click', _unlockAudio);
-  document.removeEventListener('keydown', _unlockAudio);
-};
-document.addEventListener('click', _unlockAudio, { once: true });
-document.addEventListener('keydown', _unlockAudio, { once: true });
+  Settings.load();
+  Settings.bind();
+  Settings.applyToUI();
+  Achievements.load();
+  Glossary.load();
+  Inventory.load();
+  NGPlus.load();
+  VN.init();
+  initTouchPad();
+  initOptionalTouchArt();
+  applyI18nDOM();
+  refreshTitleButtons();
+  showScene('title');
+
+  // 進入新章節時自動存到 auto 槽
+  const _origOnChapterComplete = onChapterComplete;
+  onChapterComplete = function() {
+    saveGameToSlot('auto');
+    _origOnChapterComplete();
+  };
+
+  // 嘗試解鎖瀏覽器的自動播放（首次互動時）
+  const _unlockAudio = () => {
+    Audio.unlock();
+    document.removeEventListener('click', _unlockAudio);
+    document.removeEventListener('keydown', _unlockAudio);
+  };
+  document.addEventListener('click', _unlockAudio, { once: true });
+  document.addEventListener('keydown', _unlockAudio, { once: true });
+  finishLoadingScreen();
+}
+
+preloadGameAssets()
+  .then(bootGame)
+  .catch(error => {
+    console.warn('[preload] Booting after preload error:', error);
+    setLoadingProgress(1, 1, '載入完成');
+    bootGame();
+  });

@@ -4,9 +4,21 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>妖境說 · 完整版</title>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=20260510-preload1" />
 </head>
-<body>
+<body class="is-preloading">
+
+<div id="loading-screen" class="loading-screen" role="status" aria-live="polite">
+  <div class="loading-panel">
+    <div class="loading-mark">妖境說</div>
+    <div class="loading-title">載入妖境中</div>
+    <div class="loading-bar" aria-hidden="true"><div id="loading-bar-fill"></div></div>
+    <div class="loading-row">
+      <span id="loading-detail">準備資產...</span>
+      <strong id="loading-percent">0%</strong>
+    </div>
+  </div>
+</div>
 
 <!-- ================================================== -->
 <!-- 標題畫面 (TITLE)                                   -->
@@ -15,7 +27,7 @@
   <div class="title-bg"></div>
   <div class="title-mist"></div>
   <div class="title-card">
-    <img class="title-seal" src="assets/ui/seal.png?v=20260510-asset2" alt="" />
+    <img class="title-seal" src="assets/ui/seal.png?v=20260510-preload1" alt="" />
     <h1 class="title-name">妖境說</h1>
     <p class="title-en">Yāojìng Shuō</p>
     <p class="title-deck">在水墨山海間，重寫一部山海經。</p>
@@ -357,6 +369,6 @@
 <!-- 訊息 toast -->
 <div id="toast" class="toast"></div>
 
-<script src="game.js"></script>
+<script src="game.js?v=20260510-preload1"></script>
 </body>
 </html>
