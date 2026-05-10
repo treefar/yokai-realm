@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" preserveAspectRatio="xMidYMax meet">
+  <ellipse cx="32" cy="40" rx="22" ry="28" fill="#a04030" opacity="0.85"/>
+  <ellipse cx="32" cy="40" rx="14" ry="20" fill="#d04020" opacity="0.7"/>
+  <ellipse cx="28" cy="34" rx="3" ry="4" fill="#fafafa"/>
+  <ellipse cx="36" cy="34" rx="3" ry="4" fill="#fafafa"/>
+  <ellipse cx="28" cy="34" rx="1.5" ry="2" fill="#1a1612"/>
+  <ellipse cx="36" cy="34" rx="1.5" ry="2" fill="#1a1612"/>
+  <path d="M22 50 Q32 56 42 50" stroke="#1a1612" stroke-width="2" fill="none"/>
+  <path d="M16 12 Q24 4 32 12 Q40 4 48 12" stroke="#a04030" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M14 70 Q22 76 32 72 Q42 76 50 70" stroke="#a04030" stroke-width="3" fill="none" opacity="0.7"/>
+  <text x="32" y="78" text-anchor="middle" font-family="monospace" font-size="5" fill="#fafafa" opacity="0.6">霧火</text>
+</svg>

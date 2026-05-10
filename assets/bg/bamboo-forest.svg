@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bskySky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0d8c4"/>
+      <stop offset="1" stop-color="#b8ad96"/>
+    </linearGradient>
+  </defs>
+  <rect width="3840" height="720" fill="url(#bskySky)"/>
+  <g opacity="0.35" fill="#5a6a52">
+    <rect x="100" y="200" width="14" height="520"/>
+    <rect x="280" y="180" width="14" height="540"/>
+    <rect x="540" y="220" width="14" height="500"/>
+    <rect x="800" y="160" width="14" height="560"/>
+    <rect x="1100" y="200" width="14" height="520"/>
+    <rect x="1380" y="180" width="14" height="540"/>
+    <rect x="1660" y="220" width="14" height="500"/>
+    <rect x="1940" y="160" width="14" height="560"/>
+    <rect x="2220" y="200" width="14" height="520"/>
+    <rect x="2500" y="180" width="14" height="540"/>
+    <rect x="2780" y="220" width="14" height="500"/>
+    <rect x="3060" y="160" width="14" height="560"/>
+    <rect x="3340" y="200" width="14" height="520"/>
+    <rect x="3620" y="180" width="14" height="540"/>
+  </g>
+  <g opacity="0.65" fill="#3a4a32">
+    <rect x="180" y="120" width="22" height="600"/>
+    <rect x="460" y="100" width="22" height="620"/>
+    <rect x="780" y="140" width="22" height="580"/>
+    <rect x="1080" y="100" width="22" height="620"/>
+    <rect x="1380" y="120" width="22" height="600"/>
+    <rect x="1700" y="100" width="22" height="620"/>
+    <rect x="2020" y="140" width="22" height="580"/>
+    <rect x="2340" y="100" width="22" height="620"/>
+    <rect x="2660" y="120" width="22" height="600"/>
+    <rect x="2980" y="100" width="22" height="620"/>
+    <rect x="3300" y="140" width="22" height="580"/>
+    <rect x="3620" y="100" width="22" height="620"/>
+  </g>
+  <g fill="#1a2412">
+    <rect x="320" y="60" width="32" height="660"/>
+    <rect x="680" y="40" width="32" height="680"/>
+    <rect x="1040" y="60" width="32" height="660"/>
+    <rect x="1420" y="40" width="32" height="680"/>
+    <rect x="1820" y="60" width="32" height="660"/>
+    <rect x="2240" y="40" width="32" height="680"/>
+    <rect x="2640" y="60" width="32" height="660"/>
+    <rect x="3040" y="40" width="32" height="680"/>
+    <rect x="3440" y="60" width="32" height="660"/>
+    <rect x="3760" y="40" width="32" height="680"/>
+  </g>
+  <rect y="640" width="3840" height="80" fill="#2a2418" opacity="0.85"/>
+  <ellipse cx="1920" cy="400" rx="2200" ry="120" fill="#f5efde" opacity="0.4"/>
+  <text x="1920" y="100" text-anchor="middle" font-family="serif" font-size="36" fill="#1a2412" opacity="0.5">PLACEHOLDER · bamboo-forest (battle stage)</text>
+  <text x="1920" y="700" text-anchor="middle" font-family="monospace" font-size="16" fill="#1a2412" opacity="0.5">assets/bg/bamboo-forest.svg · 3840×720（橫長視差）</text>
+</svg>

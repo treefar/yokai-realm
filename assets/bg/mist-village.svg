@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8e2d0"/>
+      <stop offset="1" stop-color="#c8bea8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <path d="M0,520 Q480,420 960,500 T1920,460 L1920,720 L0,720 Z" fill="#7a7060" opacity="0.5"/>
+  <path d="M0,640 Q360,560 720,620 T1440,600 T1920,640 L1920,820 L0,820 Z" fill="#4a4438" opacity="0.6"/>
+  <g opacity="0.7">
+    <polygon points="600,780 720,720 840,780 840,860 600,860" fill="#2a2418"/>
+    <polygon points="900,800 1020,740 1140,800 1140,880 900,880" fill="#2a2418"/>
+    <polygon points="1200,790 1320,730 1440,790 1440,870 1200,870" fill="#2a2418"/>
+  </g>
+  <ellipse cx="960" cy="700" rx="1100" ry="120" fill="#f5efde" opacity="0.7"/>
+  <ellipse cx="600" cy="780" rx="500" ry="60" fill="#f5efde" opacity="0.55"/>
+  <text x="960" y="540" text-anchor="middle" font-family="serif" font-size="32" fill="#3a2f24" opacity="0.5">PLACEHOLDER · mist-village</text>
+  <text x="960" y="1040" text-anchor="middle" font-family="monospace" font-size="14" fill="#5a4a36" opacity="0.5">assets/bg/mist-village.svg · 1920×1080</text>
+</svg>

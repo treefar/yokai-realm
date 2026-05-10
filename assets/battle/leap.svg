@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" preserveAspectRatio="xMidYMax meet">
+  <ellipse cx="40" cy="22" rx="14" ry="16" fill="#5a4a3a"/>
+  <ellipse cx="34" cy="20" rx="2" ry="3" fill="#a04030"/>
+  <ellipse cx="46" cy="20" rx="2" ry="3" fill="#a04030"/>
+  <path d="M34 28 L46 28 L42 32 L38 32 Z" fill="#fafafa"/>
+  <path d="M30 36 L50 36 L46 60 L34 60 Z" fill="#5a4a3a"/>
+  <path d="M30 38 Q14 50 18 70" stroke="#5a4a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M50 38 Q66 50 62 70" stroke="#5a4a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M34 60 L30 84 L36 86 L38 60 Z" fill="#5a4a3a"/>
+  <path d="M46 60 L50 84 L44 86 L42 60 Z" fill="#5a4a3a"/>
+  <path d="M50 36 Q70 30 74 14" stroke="#3a2f24" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="40" y="94" text-anchor="middle" font-family="monospace" font-size="5" fill="#fafafa" opacity="0.6">跳躍靈</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8d0bc"/>
+      <stop offset="1" stop-color="#a89e88"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky2)"/>
+  <rect y="720" width="1920" height="360" fill="#6a5e48" opacity="0.6"/>
+  <g opacity="0.85">
+    <polygon points="200,720 360,600 520,720 520,920 200,920" fill="#3a2f24"/>
+    <polygon points="1400,720 1560,600 1720,720 1720,920 1400,920" fill="#3a2f24"/>
+    <rect x="280" y="780" width="60" height="100" fill="#1a1612"/>
+    <rect x="1480" y="780" width="60" height="100" fill="#1a1612"/>
+  </g>
+  <circle cx="960" cy="820" r="40" fill="#2a2418"/>
+  <circle cx="960" cy="820" r="32" fill="#0a0806"/>
+  <text x="960" y="900" text-anchor="middle" font-family="serif" font-size="14" fill="#3a2f24" opacity="0.6">古井</text>
+  <rect x="700" y="780" width="80" height="120" fill="#5a4838"/>
+  <text x="740" y="920" text-anchor="middle" font-family="serif" font-size="14" fill="#3a2f24" opacity="0.6">殘碑</text>
+  <ellipse cx="1200" cy="820" rx="40" ry="60" fill="#4a3838" opacity="0.7"/>
+  <text x="1200" y="900" text-anchor="middle" font-family="serif" font-size="14" fill="#3a2f24" opacity="0.6">霧中異影</text>
+  <ellipse cx="960" cy="700" rx="1100" ry="100" fill="#f5efde" opacity="0.5"/>
+  <text x="960" y="540" text-anchor="middle" font-family="serif" font-size="32" fill="#3a2f24" opacity="0.5">PLACEHOLDER · village-interior</text>
+  <text x="960" y="1040" text-anchor="middle" font-family="monospace" font-size="14" fill="#5a4a36" opacity="0.5">assets/bg/village-interior.svg · 1920×1080</text>
+</svg>

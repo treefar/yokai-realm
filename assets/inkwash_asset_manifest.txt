@@ -1,0 +1,79 @@
+ig_02f8fc21e73135af0169fcbb5ff62c8191b6452a7f10173a1b.png -> bg/museum.png 1920x1080
+ig_02f8fc21e73135af0169fcbba00b548191ac1d93b92b6ed66f.png -> bg/mist-village.png 1920x1080
+ig_02f8fc21e73135af0169fcbbde3db481918d782c8176aa5ae7.png -> bg/village-interior.png 1920x1080
+ig_02f8fc21e73135af0169fcbc2b15f48191b516d430df602309.png -> bg/bamboo-forest.png 3840x720
+ig_02f8fc21e73135af0169fd110269348191bee0fbc201090363.png -> bg/boss-arena.png 1920x720
+ig_02f8fc21e73135af0169fd114049248191abc565f46304f4d5.png -> bg/chapter-card.png 1920x1080
+ig_02f8fc21e73135af0169fd1178c024819194cdb18585eb969e.png -> char/ruoli/normal.png 400x800
+ig_02f8fc21e73135af0169fd11b630d48191af9798cafb1b0e71.png -> char/ruoli/surprised.png 400x800
+ig_02f8fc21e73135af0169fd11f498088191b7251075461d57a8.png -> char/ruoli/worried.png 400x800
+ig_02f8fc21e73135af0169fd122fd35c8191be4e718e7d468a09.png -> char/ruoli/determined.png 400x800
+ig_02f8fc21e73135af0169fd1271e6988191b879e2f2cb8ace6a.png -> char/bailing/smile.png 400x800
+ig_02f8fc21e73135af0169fd12b32fa48191a3615ef4e2a5d98f.png -> char/bailing/sly.png 400x800
+ig_02f8fc21e73135af0169fd12f897cc81918f7751c4dcb8a2f4.png -> battle/ruoli.png 96x128
+ig_02f8fc21e73135af0169fd133e0d288191b1769c94e554ad0f.png -> battle/boar.png 96x80
+ig_02f8fc21e73135af0169fd13782b648191a75ee3307b459213.png -> battle/leap.png 80x96
+ig_02f8fc21e73135af0169fd13c36fe8819189e8286f09d7558b.png -> battle/wisp.png 64x80
+ig_02f8fc21e73135af0169fd1405c7ac819182e72c6881ba6055.png -> battle/boss.png 200x220
+procedural abstract cinnabar seal, no readable glyphs -> ui/seal.png 100x100
+
+# Colored Japanese-leaning character refresh
+ig_02f8fc21e73135af0169fdc4f690848191bb6d848011ac48fb.png -> char/ruoli/normal.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc55b05d0819195bab033fa8ab989.png -> char/ruoli/surprised.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc5bce52c8191a5d164a994c299f0.png -> char/ruoli/worried.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc629930481918ebe8f2ad0d4b0f6.png -> char/ruoli/determined.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc67c81608191be4de6078b3d336b.png -> char/bailing/smile.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc6e72970819197be9b40ec20999d.png -> char/bailing/sly.png 400x800 colored japanese ink character
+ig_02f8fc21e73135af0169fdc74afdb08191b383b3214d856919.png -> battle/ruoli.png 96x128 colored japanese ink character
+
+# Colored Japanese-leaning yokai enemy refresh
+ig_02f8fc21e73135af0169fddc50057481918f4d2b2e956ec3b9.png -> battle/boar.png 96x80 colored japanese yokai enemy
+ig_02f8fc21e73135af0169fddcca09e881919d49ee2116e14f4d.png -> battle/leap.png 80x96 colored japanese yokai enemy
+ig_02f8fc21e73135af0169fddd3f63ac8191ba365d17bd59bf93.png -> battle/wisp.png 64x80 colored japanese yokai enemy
+ig_02f8fc21e73135af0169fddda5cf108191b9f9ad37d94a7691.png -> battle/boss.png 200x220 colored japanese yokai enemy
+
+# Phase 2 baked chapter backgrounds and enemy variants
+derived from bg/boss-arena.png -> bg/foxfire.png 1920x720 warm foxfire arena
+derived from bg/bamboo-forest.png -> bg/foxfire-arena.png 3840x720 warm foxfire side-scroller
+derived from bg/boss-arena.png -> bg/south-mountain.png 1920x720 red south mountain
+derived from bg/bamboo-forest.png -> bg/south-arena.png 3840x720 red south side-scroller
+derived from bg/boss-arena.png -> bg/rift.png 1920x720 dark blue rift
+derived from bg/bamboo-forest.png -> bg/rift-arena.png 3840x720 dark blue rift side-scroller
+derived from bg/mist-village.png -> bg/nuwa.png 1920x1080 jade nuwa dream
+derived from bg/bamboo-forest.png -> bg/nuwa-arena.png 3840x720 jade nuwa side-scroller
+derived from bg/bamboo-forest.png -> bg/final-arena.png 3840x720 dark final side-scroller
+derived from bg/boss-arena.png -> bg/final-arena-boss.png 1920x720 dark final boss arena
+derived from battle/wisp.png -> battle/foxfire.png 64x80 foxfire yokai
+derived from battle/boar.png -> battle/yaobing.png 96x80 blue yaobing yokai
+derived from battle/boss.png -> battle/guidiao.png 200x220 guidiao boss
+derived from battle/boss.png -> battle/qiongqi.png 200x220 qiongqi boss
+derived from battle/boss.png -> battle/guardian.png 200x220 nuwa guardian boss
+derived from battle/boss.png -> battle/finalboss.png 200x220 final resentment boss
+derived from battle/boss.png -> battle/jiuwei.png 200x220 nine-tail illusion boss
+
+# Phase 2 vector character portraits
+procedural vector ink portrait -> char/xuance/normal.svg 400x800 stern guardian character
+procedural vector ink portrait -> char/xuance/stern.svg 400x800 stern guardian character
+procedural vector ink portrait -> char/chiyu/normal.svg 400x800 red-feather character
+procedural vector ink portrait -> char/chiyu/focused.svg 400x800 red-feather character
+procedural vector ink portrait -> char/chiyu/friendly.svg 400x800 red-feather character
+procedural vector apparition -> char/nuwa/apparition.svg 400x800 nuwa apparition character
+
+# 2026-05-09 art handoff v2 integrated batch
+ig_08ebb00c3b50ddb10169fe9047f95081919128d26c691db95c.png -> char/ruoli-modern/normal.png 400x800 modern student portrait
+ig_08ebb00c3b50ddb10169fe912cd4c481919ec3247fea68bdf1.png -> char/ruoli-modern/curious.png 400x800 modern student portrait
+ig_08ebb00c3b50ddb10169fe918581fc8191b3b6f754c078ee39.png -> char/ruoli-modern/falling.png 400x800 modern student portrait
+ig_08ebb00c3b50ddb10169fe924ea89c819197fb9b6950f55abf.png -> char/xuance/normal.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe92b29e548191b1d2b253717f11b1.png -> char/xuance/stern.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe930f148c81918d9163dd19a7cda5.png -> char/xuance/surprised.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe9372bc8081918d7e3841d9fe2df6.png -> char/chiyu/normal.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe93e58bb481919e64860ea1f37205.png -> char/chiyu/focused.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe944f1a1481919274115e2547dab1.png -> char/chiyu/friendly.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe94ccc09c819185992f42b48238e5.png -> char/nuwa/apparition.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe95843cc48191958f8b2592838710.png -> char/nuwa/sad.png 400x800 watercolor portrait
+ig_08ebb00c3b50ddb10169fe95f60dc08191a70b259b1782edcd.png -> bg/modern-street.png 1920x1080 modern Taipei street background
+procedural seal icon -> ui/yaoli/ink.png 64x64 yaoli icon
+procedural seal icon -> ui/yaoli/moon.png 64x64 yaoli icon
+procedural seal icon -> ui/yaoli/flame.png 64x64 yaoli icon
+procedural seal icon -> ui/yaoli/wind.png 64x64 yaoli icon
+procedural seal icon -> ui/yaoli/bind.png 64x64 yaoli icon

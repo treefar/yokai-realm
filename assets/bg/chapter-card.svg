@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="paper" patternUnits="userSpaceOnUse" width="40" height="40">
+      <rect width="40" height="40" fill="#f5efde"/>
+      <circle cx="6" cy="10" r="0.6" fill="#c8bea8" opacity="0.4"/>
+      <circle cx="22" cy="28" r="0.5" fill="#c8bea8" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#paper)"/>
+  <rect x="80" y="80" width="1760" height="920" fill="none" stroke="#5a4a36" stroke-width="2" opacity="0.5"/>
+  <rect x="100" y="100" width="1720" height="880" fill="none" stroke="#5a4a36" stroke-width="1" opacity="0.3"/>
+  <text x="960" y="540" text-anchor="middle" font-family="serif" font-size="32" fill="#5a4a36" opacity="0.5">PLACEHOLDER · chapter-card</text>
+  <text x="960" y="600" text-anchor="middle" font-family="monospace" font-size="14" fill="#5a4a36" opacity="0.4">章節結尾過場（程式會在中央寫字）</text>
+  <text x="960" y="1040" text-anchor="middle" font-family="monospace" font-size="14" fill="#5a4a36" opacity="0.5">assets/bg/chapter-card.svg · 1920×1080</text>
+</svg>

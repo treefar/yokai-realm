@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#2c241c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <rect x="80" y="120" width="1760" height="840" fill="#3a2f24" opacity="0.4"/>
+  <rect x="760" y="200" width="400" height="640" fill="#d8cdb6" stroke="#5a4a36" stroke-width="4"/>
+  <text x="960" y="540" text-anchor="middle" font-family="serif" font-size="36" fill="#3a2f24">《妖境圖》</text>
+  <text x="960" y="600" text-anchor="middle" font-family="serif" font-size="20" fill="#5a4a36" opacity="0.7">PLACEHOLDER · museum</text>
+  <text x="960" y="1020" text-anchor="middle" font-family="monospace" font-size="14" fill="#7a6a56" opacity="0.5">assets/bg/museum.svg · 1920×1080</text>
+</svg>

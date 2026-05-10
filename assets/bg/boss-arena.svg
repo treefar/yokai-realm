@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bossSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3428"/>
+      <stop offset="1" stop-color="#6a5e48"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="720" fill="url(#bossSky)"/>
+  <path d="M0,400 Q480,320 960,380 T1920,360 L1920,560 L0,560 Z" fill="#2a2418" opacity="0.7"/>
+  <rect y="560" width="1920" height="160" fill="#1a1612"/>
+  <g opacity="0.5">
+    <rect x="700" y="540" width="520" height="40" fill="#5a4838"/>
+    <line x1="780" y1="540" x2="780" y2="580" stroke="#1a1612" stroke-width="3"/>
+    <line x1="900" y1="540" x2="900" y2="580" stroke="#1a1612" stroke-width="3"/>
+    <line x1="1020" y1="540" x2="1020" y2="580" stroke="#1a1612" stroke-width="3"/>
+    <line x1="1140" y1="540" x2="1140" y2="580" stroke="#1a1612" stroke-width="3"/>
+  </g>
+  <g opacity="0.6">
+    <rect x="240" y="380" width="60" height="180" fill="#3a2f24"/>
+    <rect x="1620" y="380" width="60" height="180" fill="#3a2f24"/>
+  </g>
+  <ellipse cx="960" cy="500" rx="800" ry="50" fill="#f5efde" opacity="0.25"/>
+  <text x="960" y="120" text-anchor="middle" font-family="serif" font-size="32" fill="#d8cdb6" opacity="0.5">PLACEHOLDER · boss-arena</text>
+  <text x="960" y="690" text-anchor="middle" font-family="monospace" font-size="14" fill="#d8cdb6" opacity="0.5">assets/bg/boss-arena.svg · 1920×720</text>
+</svg>

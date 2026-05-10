@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" preserveAspectRatio="xMidYMax meet">
+  <rect width="400" height="800" fill="none"/>
+  <ellipse cx="200" cy="170" rx="64" ry="78" fill="#f3e2cf"/>
+  <path d="M136 140 Q140 70 200 70 Q260 70 264 140 Q280 240 264 320 L256 280 L240 290 L220 280 L200 290 L180 280 L160 290 L144 280 L136 320 Q120 240 136 140 Z" fill="#e8e0d0"/>
+  <polygon points="146,76 130,40 168,68" fill="#e8e0d0"/>
+  <polygon points="148,72 138,52 162,66" fill="#1a1612" opacity="0.6"/>
+  <polygon points="254,76 270,40 232,68" fill="#e8e0d0"/>
+  <polygon points="252,72 262,52 238,66" fill="#1a1612" opacity="0.6"/>
+  <path d="M170 168 Q180 162 190 168" stroke="#1a1612" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M210 168 Q220 162 230 168" stroke="#1a1612" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="180" cy="178" rx="3" ry="2" fill="#a04030"/>
+  <ellipse cx="220" cy="178" rx="3" ry="2" fill="#a04030"/>
+  <path d="M186 208 Q200 218 214 208" stroke="#1a1612" stroke-width="2" fill="none"/>
+  <path d="M150 250 L156 360 L156 580 L244 580 L244 360 L250 250 Z" fill="#f5efde"/>
+  <path d="M152 250 L156 360 L156 580 L160 580 L162 250 Z" fill="#a04030"/>
+  <path d="M248 250 L244 360 L244 580 L240 580 L238 250 Z" fill="#a04030"/>
+  <path d="M156 580 L244 580 L260 720 L140 720 Z" fill="#f5efde"/>
+  <rect x="180" y="270" width="40" height="6" fill="#a04030"/>
+  <path d="M260 380 Q330 420 320 500 Q310 540 280 500 Q250 460 260 380 Z" fill="#f5efde" opacity="0.7"/>
+  <path d="M260 380 Q330 420 320 500" stroke="#c8b8a0" stroke-width="2" fill="none" opacity="0.6"/>
+  <text x="200" y="780" text-anchor="middle" font-family="monospace" font-size="14" fill="#5a4a36">PLACEHOLDER · bailing/smile</text>
+</svg>

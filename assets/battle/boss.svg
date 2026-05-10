@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" preserveAspectRatio="xMidYMax meet">
+  <path d="M40 80 Q60 30 100 30 Q140 30 160 80 Q180 130 170 200 L150 196 L130 204 L110 196 L90 204 L70 196 L50 200 L30 196 Q20 130 40 80 Z" fill="#1a1612" opacity="0.9"/>
+  <ellipse cx="100" cy="64" rx="40" ry="44" fill="#2a2418"/>
+  <ellipse cx="100" cy="60" rx="32" ry="36" fill="#3a3428"/>
+  <ellipse cx="86" cy="60" rx="4" ry="6" fill="#a04030"/>
+  <ellipse cx="114" cy="60" rx="4" ry="6" fill="#a04030"/>
+  <path d="M84 80 Q100 90 116 80" stroke="#1a1612" stroke-width="2" fill="none"/>
+  <path d="M40 80 Q20 110 30 160 Q40 180 60 170" stroke="#1a1612" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M160 80 Q180 110 170 160 Q160 180 140 170" stroke="#1a1612" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <ellipse cx="40" cy="160" rx="50" ry="20" fill="#2a2418" opacity="0.5"/>
+  <ellipse cx="160" cy="160" rx="50" ry="20" fill="#2a2418" opacity="0.5"/>
+  <path d="M30 170 L20 200 M50 174 L40 204 M150 174 L160 204 M170 170 L180 200" stroke="#2a2418" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <text x="100" y="216" text-anchor="middle" font-family="monospace" font-size="8" fill="#fafafa" opacity="0.6">霧妖將 (boss)</text>
+</svg>

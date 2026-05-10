@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>妖境說 · 完整版</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================================================== -->
+<!-- 標題畫面 (TITLE)                                   -->
+<!-- ================================================== -->
+<section id="scene-title" class="scene scene-active">
+  <div class="title-bg"></div>
+  <div class="title-mist"></div>
+  <div class="title-card">
+    <img class="title-seal" src="assets/ui/seal.png" alt="" />
+    <h1 class="title-name">妖境說</h1>
+    <p class="title-en">Yāojìng Shuō</p>
+    <p class="title-deck">在水墨山海間，重寫一部山海經。</p>
+    <div class="title-actions">
+      <button class="chop-btn" data-action="start">新的開始</button>
+      <button class="chop-btn" data-action="continue">繼續</button>
+      <button class="chop-btn" data-action="ng-plus" id="btn-ngplus">NG+ 二週目</button>
+      <button class="chop-btn ghost" data-action="chapter-select">章節選擇</button>
+      <button class="chop-btn ghost" data-action="skip-to-battle">直接進戰鬥（除錯）</button>
+    </div>
+    <p class="title-meta">完整版 · Full Build · 七章 · 五大妖力 · 三結局</p>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!-- 開場 CG (30s, Canvas)                              -->
+<!-- ================================================== -->
+<section id="scene-cg" class="scene">
+  <canvas id="cg-canvas" width="1920" height="1080"></canvas>
+  <button class="skip-btn" data-action="skip-cg">略過 ›</button>
+</section>
+
+<!-- ================================================== -->
+<!-- 視覺小說 (VN)                                      -->
+<!-- ================================================== -->
+<section id="scene-vn" class="scene">
+  <div class="vn-bg" id="vn-bg"></div>
+  <div class="vn-stage">
+    <div class="vn-char-slot vn-char-left">  <img id="vn-char-left"   alt="" /></div>
+    <div class="vn-char-slot vn-char-center"><img id="vn-char-center" alt="" /></div>
+    <div class="vn-char-slot vn-char-right"> <img id="vn-char-right"  alt="" /></div>
+  </div>
+  <div class="vn-explore" id="vn-explore"></div>
+  <div class="dialog-frame" id="dialog-frame">
+    <div class="dialog-name" id="dialog-name"></div>
+    <div class="dialog-text" id="dialog-text"></div>
+    <div class="dialog-cursor">▾</div>
+  </div>
+  <div class="choices" id="choices"></div>
+</section>
+
+<!-- ================================================== -->
+<!-- 戰鬥 (Side-scroller)                               -->
+<!-- ================================================== -->
+<section id="scene-battle" class="scene">
+  <canvas id="battle-canvas" width="1920" height="720"></canvas>
+  <div class="hud">
+    <div class="hud-bar">
+      <span class="hud-label">林若璃</span>
+      <div class="bar bar-hp"><div class="bar-fill" id="hud-hp"></div></div>
+    </div>
+    <div class="hud-bar">
+      <span class="hud-label">護體</span>
+      <div class="bar bar-armor"><div class="bar-fill" id="hud-armor"></div></div>
+    </div>
+    <div class="hud-bar">
+      <span class="hud-label">妖力</span>
+      <div class="bar bar-yaoli"><div class="bar-fill" id="hud-yaoli"></div></div>
+    </div>
+  </div>
+  <div class="hud-boss" id="hud-boss" hidden>
+    <span class="hud-label">霧妖將</span>
+    <div class="bar bar-boss"><div class="bar-fill" id="hud-boss-hp"></div></div>
+  </div>
+  <div class="battle-help">← → 移動　Space 跳　Z／J／滑鼠左鍵 斬擊　X／K 翻滾　C／L 妖力　1-5 切換妖力</div>
+</section>
+
+<!-- ================================================== -->
+<!-- 章節結尾 (Chapter Card)                            -->
+<!-- ================================================== -->
+<section id="scene-chapter" class="scene">
+  <div class="chapter-bg"></div>
+  <div class="chapter-card">
+    <p class="chapter-eyebrow" id="chapter-eyebrow">Chapter Complete</p>
+    <h2 class="chapter-title" id="chapter-title"></h2>
+    <p class="chapter-subtitle" id="chapter-subtitle"></p>
+    <div class="chapter-divider"></div>
+    <p class="chapter-next" id="chapter-next"></p>
+    <div class="chapter-actions">
+      <button class="chop-btn" id="chapter-continue">繼續下一章</button>
+      <button class="chop-btn ghost" data-action="back-to-title">返回標題</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!-- 結局畫面                                           -->
+<!-- ================================================== -->
+<section id="scene-ending" class="scene">
+  <div class="ending-bg"></div>
+  <img class="ending-character" id="ending-character" alt="" />
+  <div class="ending-card">
+    <p class="ending-eyebrow" id="ending-eyebrow"></p>
+    <h2 class="ending-title" id="ending-title"></h2>
+    <div class="ending-divider"></div>
+    <p class="ending-text" id="ending-text"></p>
+    <button class="chop-btn" id="ending-end">回到山海之外</button>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!-- 妖力側欄（戰鬥/VN 顯示）                            -->
+<!-- ================================================== -->
+<aside id="yaoli-hud" class="yaoli-hud">
+  <div class="yaoli-hud-head">
+    <span class="yaoli-current-label">當前妖力</span>
+    <span id="yaoli-current" class="yaoli-current">墨影</span>
+  </div>
+  <div class="yaoli-list" id="yaoli-list"></div>
+  <p class="yaoli-tip">數字鍵 1-5 切換</p>
+</aside>
+
+<!-- 夥伴支援技 HUD（戰鬥畫面右下） -->
+<aside id="partner-hud" class="partner-hud"></aside>
+
+<!-- ================================================== -->
+<!-- 系統按鈕 + 系統選單                                  -->
+<!-- ================================================== -->
+<div id="sys-buttons" class="sys-buttons">
+  <button class="sys-btn" data-action="open-menu">≡ 選單</button>
+  <button class="sys-btn" data-action="open-backlog" title="對話歷史">↑ 歷史</button>
+  <button class="sys-btn" data-action="toggle-auto" id="btn-auto" title="自動推進">▷ 自動</button>
+  <button class="sys-btn" data-action="toggle-skip" id="btn-skip" title="快速跳過">⏩ 跳過</button>
+</div>
+
+<div id="sys-menu" class="sys-menu">
+  <div class="sys-menu-card">
+    <h3>系統</h3>
+    <button class="chop-btn" data-action="open-save">存檔</button>
+    <button class="chop-btn ghost" data-action="open-load">讀檔</button>
+    <button class="chop-btn ghost" data-action="open-settings">設定</button>
+    <button class="chop-btn ghost" data-action="open-gallery">圖鑑</button>
+    <button class="chop-btn ghost" data-action="open-glossary">山海經</button>
+    <button class="chop-btn ghost" data-action="open-inventory">背包</button>
+    <button class="chop-btn ghost" data-action="chapter-select">章節選擇</button>
+    <button class="chop-btn ghost" data-action="back-to-title">返回標題</button>
+    <button class="chop-btn ghost" data-action="close-menu">關閉選單</button>
+    <p class="sys-tip">Esc 也能開啟此選單</p>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 章節選擇                                           -->
+<!-- ================================================== -->
+<div id="chapter-menu" class="chapter-menu">
+  <div class="chapter-menu-card">
+    <h3>章節選擇</h3>
+    <div id="chapter-list" class="chapter-list"></div>
+    <button class="chop-btn ghost" data-action="close-chapter-menu">關閉</button>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 設定                                               -->
+<!-- ================================================== -->
+<div id="settings-menu" class="overlay-menu">
+  <div class="overlay-card">
+    <h3>設定</h3>
+    <div class="settings-row">
+      <label>文字速度</label>
+      <select id="set-text-speed">
+        <option value="60">慢</option>
+        <option value="28" selected>普通</option>
+        <option value="14">快</option>
+        <option value="0">瞬顯</option>
+      </select>
+    </div>
+    <div class="settings-row">
+      <label>BGM 音量</label>
+      <input type="range" id="set-bgm-vol" min="0" max="100" value="60" />
+      <span class="settings-val" id="val-bgm-vol">60</span>
+    </div>
+    <div class="settings-row">
+      <label>SFX 音量</label>
+      <input type="range" id="set-sfx-vol" min="0" max="100" value="80" />
+      <span class="settings-val" id="val-sfx-vol">80</span>
+    </div>
+    <div class="settings-row">
+      <label>畫面震動</label>
+      <input type="checkbox" id="set-shake" checked />
+    </div>
+    <div class="settings-row">
+      <label>自動推進間隔（秒）</label>
+      <input type="range" id="set-auto-interval" min="1" max="6" step="0.5" value="2.5" />
+      <span class="settings-val" id="val-auto-interval">2.5</span>
+    </div>
+    <div class="settings-row">
+      <label>觸控搖桿（行動裝置）</label>
+      <input type="checkbox" id="set-touch" />
+    </div>
+    <div class="settings-row">
+      <label>顯示 FPS / 除錯</label>
+      <input type="checkbox" id="set-perf" />
+    </div>
+    <div class="settings-row">
+      <label>語言</label>
+      <select id="set-lang">
+        <option value="zh-Hant" selected>繁體中文</option>
+        <option value="zh-Hans">简体中文</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="reset-settings">重設預設值</button>
+      <button class="chop-btn" data-action="close-settings">確定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 多存檔（5 槽 + 1 自動）                              -->
+<!-- ================================================== -->
+<div id="save-menu" class="overlay-menu">
+  <div class="overlay-card overlay-card-wide">
+    <h3 id="save-menu-title">存檔</h3>
+    <div id="save-slots" class="save-slots"></div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="close-save">關閉</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 對話 backlog                                       -->
+<!-- ================================================== -->
+<div id="backlog-menu" class="overlay-menu">
+  <div class="overlay-card overlay-card-wide">
+    <h3>對話歷史</h3>
+    <div id="backlog-list" class="backlog-list"></div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="close-backlog">關閉</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 結局 / CG 圖鑑                                      -->
+<!-- ================================================== -->
+<div id="gallery-menu" class="overlay-menu">
+  <div class="overlay-card overlay-card-wide">
+    <h3>圖鑑</h3>
+    <div class="gallery-tabs">
+      <button class="gallery-tab active" data-tab="endings">結局</button>
+      <button class="gallery-tab" data-tab="cg">CG</button>
+      <button class="gallery-tab" data-tab="achievements">成就</button>
+    </div>
+    <div id="gallery-content" class="gallery-content"></div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="close-gallery">關閉</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 背包                                               -->
+<!-- ================================================== -->
+<div id="inventory-menu" class="overlay-menu">
+  <div class="overlay-card overlay-card-wide">
+    <h3>背包</h3>
+    <p style="font-family:var(--font-display); font-size:13.5px; color:var(--muted); margin-bottom:14px;">點選道具嘗試使用 — 不同章節對不同道具會有不同反應。</p>
+    <div id="inventory-list" class="inventory-list"></div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="close-inventory">關閉</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 山海經詞典                                         -->
+<!-- ================================================== -->
+<div id="glossary-menu" class="overlay-menu">
+  <div class="overlay-card overlay-card-wide">
+    <h3>山海經</h3>
+    <div id="glossary-list" class="glossary-list"></div>
+    <div class="overlay-actions">
+      <button class="chop-btn ghost" data-action="close-glossary">關閉</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- 戰鬥教學提示卡（第一次戰鬥）                        -->
+<!-- ================================================== -->
+<div id="battle-tutorial" class="overlay-menu">
+  <div class="overlay-card">
+    <h3>初次戰鬥 · 操作提示</h3>
+    <div class="tutorial-grid">
+      <div><kbd>← →</kbd><span>移動</span></div>
+      <div><kbd>Space ↑</kbd><span>跳躍</span></div>
+      <div><kbd>Z / J / 左鍵</kbd><span>斬擊</span></div>
+      <div><kbd>X / K</kbd><span>翻滾（無敵）</span></div>
+      <div><kbd>C / L</kbd><span>釋放妖力</span></div>
+      <div><kbd>1-5</kbd><span>切換妖力</span></div>
+      <div><kbd>V / B / N</kbd><span>夥伴支援技（每場一次）</span></div>
+      <div><kbd>Esc</kbd><span>暫停 / 選單</span></div>
+    </div>
+    <p class="tutorial-tip">Boss 出招前會出現紅色預警圈，按 X 翻滾躲避。連擊不被打 → 每 10 hits 回妖力。</p>
+    <div class="overlay-actions">
+      <button class="chop-btn" data-action="close-tutorial">開始戰鬥</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================== -->
+<!-- Boss 出場演出                                       -->
+<!-- ================================================== -->
+<div id="boss-intro" class="boss-intro">
+  <div class="boss-intro-bg"></div>
+  <img class="boss-intro-hero" id="boss-intro-hero" alt="" />
+  <div class="boss-intro-card">
+    <p class="boss-intro-eyebrow">前方妖獸</p>
+    <h2 class="boss-intro-name" id="boss-intro-name"></h2>
+    <p class="boss-intro-sub" id="boss-intro-sub"></p>
+  </div>
+  <p class="boss-intro-copy" id="boss-intro-copy"></p>
+</div>
+
+<!-- ================================================== -->
+<!-- 觸控搖桿（手機/平板）                               -->
+<!-- ================================================== -->
+<div id="virtual-pad" class="virtual-pad">
+  <div class="vpad-stick" id="vpad-stick">
+    <div class="vpad-knob" id="vpad-knob"></div>
+  </div>
+  <div class="vpad-buttons">
+    <button class="vpad-btn" data-vkey="Space"     title="跳">⤒</button>
+    <button class="vpad-btn" data-vkey="KeyZ"      title="攻擊">墨</button>
+    <button class="vpad-btn" data-vkey="KeyX"      title="翻滾">滾</button>
+    <button class="vpad-btn" data-vkey="KeyC"      title="妖力">力</button>
+  </div>
+</div>
+
+<!-- 信任度 / flag 浮字（選擇時短暫飄出） -->
+<div id="trust-float-layer" class="trust-float-layer"></div>
+
+<!-- FPS / perf debug overlay -->
+<div id="perf-overlay" class="perf-overlay"></div>
+
+<!-- 訊息 toast -->
+<div id="toast" class="toast"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
