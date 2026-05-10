@@ -188,7 +188,7 @@ body:not(.is-preloading) .loading-screen {
   position: absolute; inset: 0;
   background:
     linear-gradient(180deg, oklch(98% 0.008 80 / 0.68), oklch(88% 0.018 70 / 0.30)),
-    url("assets/bg/chapter-card.png?v=20260510-preload1") center/cover;
+    url("assets/bg/chapter-card.webp?v=20260510-preload3") center/cover;
   background-blend-mode: multiply;
 }
 .title-bg::before {
@@ -579,7 +579,7 @@ body:not(.is-preloading) .loading-screen {
    ============================================================ */
 .chapter-bg {
   position: absolute; inset: 0;
-  background: url("assets/bg/chapter-card.png?v=20260510-preload1") center/cover;
+  background: url("assets/bg/chapter-card.webp?v=20260510-preload3") center/cover;
 }
 .chapter-card {
   position: relative;
@@ -870,7 +870,7 @@ body:not(.is-preloading) .loading-screen {
   height: 460px;
   background:
     linear-gradient(180deg, oklch(96% 0.012 80 / 0.55), oklch(86% 0.014 78 / 0.78)),
-    url("assets/bg/chapter-card.png?v=20260510-preload1") center/cover;
+    url("assets/bg/chapter-card.webp?v=20260510-preload3") center/cover;
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
